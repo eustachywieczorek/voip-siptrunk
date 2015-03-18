@@ -12,4 +12,6 @@ RUN cp -r /usr/share/freeswitch/conf/vanilla /etc/freeswitch
 ADD acl.conf.xml.sh /etc/freeswitch/autoload_configs/acl.conf.xml.sh
 ADD public.xml /etc/freeswitch/dialplan/public.xml
 
+EXPOSE 5060
+
 CMD sh /etc/freeswitch/autoload_configs/acl.conf.xml.sh && freeswitch
