@@ -2,3 +2,5 @@ siptrunk:
     image: quay.io/vikingco/siptrunk
     environment:
         - ACCEPT_IP=172.17.42.1/16
+    net:
+        "host"
