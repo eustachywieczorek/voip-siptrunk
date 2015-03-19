@@ -23,12 +23,11 @@ echo """
 	the users variables and params apply as if they
 	digest authenticated.
     -->
-    <list name=\"domains\" default=\"deny\">
+    <list name=\"domains\" default=\"allow\">
       <!-- domain= is special it scans the domain from the directory to build the ACL -->
-      <node type=\"allow\" domain=\"$${domain}\"/>
+      <node type=\"allow\" domain=\"\$\${domain}\"/>
       <!-- use cidr= if you wish to allow ip ranges to this domains acl. -->
       <!-- <node type=\"allow\" cidr=\"192.168.0.0/24\"/> -->
-      <node type=\"allow\" cidr=\"$ACCEPT_IP\"/>
     </list>
 
   </network-lists>

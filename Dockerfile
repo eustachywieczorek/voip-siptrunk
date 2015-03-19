@@ -9,6 +9,7 @@ RUN apt-get install freeswitch-meta-vanilla -y
 RUN apt-get install -y tmux vim
 RUN cp -r /usr/share/freeswitch/conf/vanilla /etc/freeswitch
 
+ADD 1000.xml /etc/freeswitch/directory/default/1000.xml
 ADD acl.conf.xml.sh /etc/freeswitch/autoload_configs/acl.conf.xml.sh
 ADD public.xml /etc/freeswitch/dialplan/public.xml
 ADD vars.xml /etc/freeswitch/vars.xml
